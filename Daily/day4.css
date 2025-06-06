@@ -1,0 +1,19 @@
+h1{
+    color: blue;
+}
+
+a[href=googler]{
+    color: red;
+}
+para{
+    border: 2px solid purple;
+    border-radius: 20px;
+}
+
+para2{
+    border-bottom: 1px solid ;
+    border-top: 1px solid;
+    border-style: dashed;
+    margin: 50px;
+    padding: 30px;
+}
