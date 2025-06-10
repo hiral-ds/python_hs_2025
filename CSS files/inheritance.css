@@ -1,0 +1,16 @@
+.parent {
+    font-size: 20px;
+    color: blue;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}

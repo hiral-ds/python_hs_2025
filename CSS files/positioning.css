@@ -1,0 +1,51 @@
+.container {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    border: 3px solid black;
+    margin: 50px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+}
+
+.static {
+    position: static;
+    background-color: red;
+}
+
+.relative {
+    position: relative;
+    background-color: blue;
+    top: 20px;
+    left: 20px;
+}
+
+.absolute {
+    position: absolute;
+    background-color: green;
+    top: 50px;
+    right: 50px;
+}
+
+.fixed {
+    position: fixed;
+    background-color: yellow;
+    bottom: 20px;
+    right: 20px;
+}
+
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: purple;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.spacer {
+    height: 1000px;
+}

@@ -1,0 +1,15 @@
+/* Before reset */
+body {
+    font-family: Arial;
+}
+
+h1 {
+    color: pink;
+}
+
+/* After reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

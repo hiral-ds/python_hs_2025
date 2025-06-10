@@ -1,0 +1,20 @@
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.justify-heading {
+    text-align: justify;
+}

@@ -1,0 +1,6 @@
+.para{
+    position: relative;
+    left: 250px;
+    top: 200px;
+    z-index: 1;
+}

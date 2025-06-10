@@ -1,0 +1,16 @@
+.power-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: pink;
+    color: black;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.power-button:hover {
+    background-color: beige;
+    transform: scale(1.1) rotate(5deg);
+    font-size: 20px;
+}

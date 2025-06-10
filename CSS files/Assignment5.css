@@ -1,0 +1,17 @@
+div {
+  width: 200px;
+  height: 100px;
+  background-color: lightgray;
+  text-align: center;
+  line-height: 100px;
+  margin: auto;
+}
+
+.one {
+  margin-bottom: 30px;
+}
+
+.two {
+  margin-top: 50px;
+  background-color: lightcoral;
+}
