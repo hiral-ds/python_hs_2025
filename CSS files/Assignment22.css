@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+        
+.rocket {
+    font-size: 60px;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+        
+.rocket:active {
+    animation: launch 2s forwards cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+        
+@keyframes launch {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-500px);
+    }
+}
+        
+.launch-pad {
+    width: 100px;
+    height: 30px;
+    background-color: #555;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 100px;
+}

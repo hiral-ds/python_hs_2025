@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mood-container {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: background-color 0.5s ease;
+}
+
+.mood-container::after {
+    content: "Happy (Desktop)";
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+}
+
+/* Large screens */
+@media (min-width: 992px) {
+    .mood-container {
+        background-color: #3498db;
+    }
+    .mood-container::after {
+        content: "Happy (Desktop)";
+    }
+}
+
+/* Medium screens */
+@media (max-width: 991px) and (min-width: 601px) {
+    .mood-container {
+        background-color: #f1c40f;
+    }
+    .mood-container::after {
+        content: "Excited (Tablet)";
+    }
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+    .mood-container {
+        background-color: #e74c3c;
+    }
+    .mood-container::after {
+        content: "Energetic (Mobile)";
+    }
+}

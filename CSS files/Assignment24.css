@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+        
+.crab {
+    width: 100px;
+    height: 60px;
+    background-color: red;
+    border-radius: 50%;
+    position: relative;
+    animation: walk 4s infinite alternate ease-in-out;
+}
+        
+.crab::before, .crab::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    background-color: red;
+    top: -10px;
+    border-radius: 50%;
+}
+        
+.crab::before {
+    left: -15px;
+    transform: rotate(45deg);
+}
+        
+.crab::after {
+    right: -15px;
+    transform: rotate(-45deg);
+}
+        
+@keyframes walk {
+    0% {
+        transform: translateX(-200px) rotate(-5deg);
+    }
+    100% {
+        transform: translateX(200px) rotate(5deg);
+    }
+}

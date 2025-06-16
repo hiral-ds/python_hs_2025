@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:antiquewhite;
+}
+        
+.disco {
+    width: 150px;
+    height: 150px;
+    animation: spinAndColor 4s infinite linear;
+}
+        
+@keyframes spinAndColor {
+    0% {
+        transform: rotate(0deg);
+        background-color: pink;
+    }
+    25% {
+        transform: rotate(90deg);
+        background-color: lightblue;
+    }
+    50% {
+        transform: rotate(180deg);
+        background-color: violet;
+    }
+    75% {
+        transform: rotate(270deg);
+        background-color: lightgreen;
+    }
+    100% {
+        transform: rotate(360deg);
+        background-color: lightgoldenrodyellow;
+    }
+}

@@ -1,0 +1,45 @@
+body{
+    background: #e3f2fd;
+    color: #0d3b66;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+header p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/*navigation bar*/
+nav {
+  background: #0076b6da;
+  padding: 0.8rem;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 1rem;
+  font-weight: 500;
+  text-decoration: none ;
+}
+
+/*sections*/
+section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+/*hiral*/
+.hiral {
+  background: #caf0f8;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
