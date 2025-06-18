@@ -1,227 +1,456 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hiral Shewale | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
+    /* ==== VARIABLES ==== */
+    :root {
+      --primary: #2a3a4a;       /* Deep slate */
+      --secondary: #e6a756;     /* Gold accent */
+      --light: #f8f9fa;         /* Soft white */
+      --dark: #1a1a1a;          /* Dark text */
+      --accent: #8e6c88;        /* Muted purple for creative section */
+    }
+
+    /* ==== BASE STYLES ==== */
+    * {
       margin: 0;
       padding: 0;
-      background-color: #fef6f9;
-      color: #333;
+      box-sizing: border-box;
     }
 
-    header {
-      background: #ffc5d9;
-      color: #4b2e2e;
-      padding: 1.5rem 1rem;
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--dark);
+      background-color: var(--light);
+    }
+
+    h1, h2, h3 {
+      font-family: 'Georgia', serif;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--secondary);
+    }
+
+    .container {
+      width: 85%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+
+    /* ==== HERO SECTION ==== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
       text-align: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      background: linear-gradient(135deg, rgba(42,58,74,0.9) 0%, rgba(42,58,74,0.7) 100%), 
+                  url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      color: var(--light);
+      padding: 0 2rem;
     }
 
-    nav {
-      background: #ff94b3;
-      padding: 0.75rem 0;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
     }
 
-    nav ul {
-      list-style: none;
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: var(--light);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+
+    .btn-group {
       display: flex;
       justify-content: center;
-      margin: 0;
-      padding: 0;
+      gap: 1rem;
+      flex-wrap: wrap;
     }
 
-    nav li {
-      margin: 0 1.2rem;
+    .btn {
+      padding: 0.8rem 1.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: all 0.3s ease;
     }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
+    .btn-primary {
+      background-color: var(--secondary);
+      color: var(--primary);
     }
 
-    nav a:hover {
-      color: #333;
+    .btn-outline {
+      border: 2px solid var(--light);
+      color: var(--light);
     }
 
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    /* ==== SECTIONS ==== */
     section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
+      padding: 4rem 0;
     }
 
-    .hero {
-      background: #ffeef3;
-      border-radius: 20px;
-      padding: 3rem 1rem;
+    .section-title {
       text-align: center;
-      margin-top: 1.5rem;
+      margin-bottom: 3rem;
+      position: relative;
     }
 
-    .hero h2 {
-      font-size: 2rem;
-      color: #d63384;
+    .section-title:after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: var(--secondary);
+      margin: 0.5rem auto;
     }
 
-    #about img {
-      border-radius: 15px;
-      margin-top: 1rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    /* ==== ABOUT SECTION ==== */
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
     }
 
-    .skills {
-      margin-top: 1rem;
+    .about-text {
+      padding-right: 1rem;
     }
 
-    .skills div {
-      margin-bottom: 0.5rem;
-    }
-
-    .skill-bar {
-      background: #f5d6e0;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    .skill-level {
-      background: #e75480;
-      color: white;
-      padding: 0.3rem;
-      text-align: right;
-      border-radius: 10px 0 0 10px;
-    }
-
-    form {
-      background: #fff;
-      padding: 1.5rem;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-
-    form div {
+    .about-text p {
       margin-bottom: 1rem;
     }
 
-    input, textarea {
-      width: 100%;
-      padding: 0.7rem;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      font-family: 'Poppins', sans-serif;
+    .about-details {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     }
 
-    button {
-      background: #e75480;
-      color: white;
-      padding: 0.7rem 1.5rem;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: 0.3s;
+    .detail-item {
+      margin-bottom: 1rem;
     }
 
-    button:hover {
-      background: #d63384;
+    .detail-item strong {
+      display: inline-block;
+      width: 120px;
+      color: var(--primary);
     }
 
-    footer {
-      background: #ffc5d9;
+    /* ==== SKILLS SECTION ==== */
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .skill-category {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .skill-category h3 {
+      margin-bottom: 1rem;
+      color: var(--secondary);
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill-tag {
+      background-color: var(--light);
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    /* ==== CREATIVE SECTION ==== */
+    .creative-section {
+      background-color: var(--primary);
+      color: var(--light);
+    }
+
+    .creative-section h2 {
+      color: var(--light);
+    }
+
+    .creative-section .section-title:after {
+      background: var(--accent);
+    }
+
+    .creative-content {
+      max-width: 800px;
+      margin: 0 auto;
       text-align: center;
-      padding: 1rem;
-      color: #4b2e2e;
-      margin-top: 2rem;
     }
 
-    @media (max-width: 600px) {
-      nav ul {
-        flex-direction: column;
-        align-items: center;
+    /* ==== PROJECTS SECTION ==== */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .project-image {
+      height: 200px;
+      background-color: #eee;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .project-info {
+      padding: 1.5rem;
+    }
+
+    .project-status {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .status-completed {
+      background-color: #d4edda;
+      color: #155724;
+    }
+
+    .status-progress {
+      background-color: #fff3cd;
+      color: #856404;
+    }
+
+    .status-upcoming {
+      background-color: #d1ecf1;
+      color: #0c5460;
+    }
+
+    /* ==== CONTACT SECTION ==== */
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--primary);
+      transition: color 0.3s ease;
+    }
+
+    .contact-link:hover {
+      color: var(--secondary);
+    }
+
+    /* ==== RESPONSIVE DESIGN ==== */
+    @media (max-width: 768px) {
+      .about-content {
+        grid-template-columns: 1fr;
       }
 
-      nav li {
-        margin: 0.5rem 0;
+      .hero h1 {
+        font-size: 2.5rem;
       }
     }
   </style>
 </head>
 <body>
-
-  <header>
-    <h1>My Portfolio</h1>
-  </header>
-
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <section id="home" class="hero">
-    <h2>Hi, I'm Hiral</h2>
-    <p>Student at K.K.Wagh Polytechnic, Nashik</p>
-  </section>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <img src="p.jpeg" alt="My Photo" width="150">
-    <p>I'm a student learning web development. I love creating websites and learning new technologies.</p>
-    <p><strong>Email:</strong> hiral.shewale02@gmail.com</p>
-  </section>
-
-  <section id="skills">
-    <h2>My Skills</h2>
-    <div class="skills">
-      <div>HTML</div>
-      <div class="skill-bar">
-        <div class="skill-level" style="width:90%">90%</div>
-      </div>
-
-      <div>CSS</div>
-      <div class="skill-bar">
-        <div class="skill-level" style="width:80%">80%</div>
-      </div>
-
-      <div>JavaScript</div>
-      <div class="skill-bar">
-        <div class="skill-level" style="width:60%">60%</div>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Hi, I'm Hiral — a passionate tech enthusiast & creative thinker.</h1>
+      <p>I'm a diploma student in Computer Technology with a love for clean code, storytelling, and all things aesthetic.</p>
+      <div class="btn-group">
+        <a href="#" class="btn btn-primary">Download Resume</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+        <a href="#projects" class="btn btn-outline">Explore My Work</a>
       </div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form>
-      <div>
-        <label>Name:</label>
-        <input type="text" placeholder="Your Name">
+  <!-- ABOUT SECTION -->
+  <section id="about" class="container">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>I'm a 17-year-old Computer Technology student who blends logic with creativity. From writing code to writing stories, I love solving problems and expressing emotions through both technology and art. Whether it's a website layout or a fictional character arc, I aim for thoughtful execution and meaningful impact.</p>
       </div>
-      <div>
-        <label>Email:</label>
-        <input type="email" placeholder="Your Email">
+      <div class="about-details">
+        <div class="detail-item">
+          <strong>Full Name:</strong> Hiral Shewale
+        </div>
+        <div class="detail-item">
+          <strong>Born:</strong> November 2, 2007
+        </div>
+        <div class="detail-item">
+          <strong>Education:</strong> Diploma in Computer Technology
+        </div>
+        <div class="detail-item">
+          <strong>Future Goal:</strong> B.E./B.Tech in AI & Data Science
+        </div>
+        <div class="detail-item">
+          <strong>Location:</strong> Thane, Maharashtra, India
+        </div>
       </div>
-      <div>
-        <label>Message:</label>
-        <textarea placeholder="Your Message" rows="4"></textarea>
-      </div>
-      <button type="submit">Send</button>
-    </form>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2024 My Portfolio. All rights reserved.</p>
-  </footer>
+  <!-- AMBITIONS SECTION -->
+  <section id="ambitions" class="container">
+    <h2 class="section-title">Ambitions & Goals</h2>
+    <div class="skills-container">
+      <div class="skill-category">
+        <h3>Academic Goals</h3>
+        <ul>
+          <li>Complete my diploma with distinction</li>
+          <li>Pursue a Bachelor's degree in AI & Data Science or Computer Science</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>Technical Goals</h3>
+        <ul>
+          <li>Improve frontend & backend development skills</li>
+          <li>Contribute to open-source projects</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>Creative Goals</h3>
+        <ul>
+          <li>Build my own portfolio of tech + creative projects</li>
+          <li>Launch a personal storytelling site or app</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="container">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-container">
+      <div class="skill-category">
+        <h3>Languages & Tools</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">HTML</span>
+          <span class="skill-tag">CSS</span>
+          <span class="skill-tag">GitHub</span>
+          <span class="skill-tag">C++</span>
+          <span class="skill-tag">C</span>
+          <span class="skill-tag">Data Structures</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3>Concepts</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Semantic HTML</span>
+          <span class="skill-tag">CSS Styling</span>
+          <span class="skill-tag">Box Model</span>
+          <span class="skill-tag">Sorting Algorithms</span>
+          <span class="skill-tag">Responsive Design</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREATIVE SECTION -->
+  <section id="creative" class="creative-section">
+    <div class="container">
+      <h2 class="section-title">Creative Side</h2>
+      <div class="creative-content">
+        <h3>Writing & Storytelling</h3>
+        <p>Wattpad fiction writer focusing on emotional depth, poly dynamics, college life, and identity. I love creating layered characters and unexpected romantic plots.</p>
+        <h3>Video Editing</h3>
+        <p>Specializing in aesthetic soundtracks, minimalist clips, subtle transitions, and mood music. I have a good eye for visual storytelling (especially romance or mystery).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="container">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');"></div>
+        <div class="project-info">
+          <span class="project-status status-completed">Completed</span>
+          <h3>Personal Portfolio</h3>
+          <p>Simple responsive site showcasing resume, goals, and contact</p>
+          <p><strong>Tech:</strong> HTML, CSS</p>
+        </div>
+      </div>
+      
+      <div class="project-card">
+        <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');"></div>
+        <div class="project-info">
+          <span class="project-status status-upcoming">Upcoming</span>
+          <h3>Sorting Visualizer</h3>
+          <p>Tool to visualize bubble/selection sort for beginners</p>
+          <p><strong>Tech:</strong> C++, JavaScript</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="container">
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="contact-links">
+      <a href="mailto:your-email@example.com" class="contact-link">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+      <a href="https://www.linkedin.com/in/hiral-shewale-6a0577347/" target="_blank" class="contact-link">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/hiral-ds" target="_blank" class="contact-link">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="#" class="contact-link">
+        <i class="fas fa-map-marker-alt"></i> Thane, India
+      </a>
+    </div>
+  </section>
 </body>
 </html>
