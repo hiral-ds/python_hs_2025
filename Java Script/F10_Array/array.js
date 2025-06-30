@@ -16,7 +16,7 @@
 // console.log(arr[2]);
 //---------------------------------------------------------------
 // // String Array
-// let names = ["yatin","dsda","fafa","aawfa"];
+// let names = ["hiral","riya","aisha","rhea"];
 
 // console.log(names);
 // console.log(names[0]);

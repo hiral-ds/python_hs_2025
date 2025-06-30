@@ -1,7 +1,7 @@
 // How to iterate in Objects
 const person = {
-    name : "Yatin",
-    age : 23,
+    name : "hirral",
+    age : 17,
     "person hobbie" : ["chess","games","sketches"]
 }
 //-------------------------------------------------------------

@@ -8,8 +8,8 @@
 // Here person hobbie key has space in between 
 // we cannot store the key without adding string literals
 const person = {
-    name : "Yatin",
-    age : 23,
+    name : "hiral",
+    age : 17,
     "person hobbie" : ["chess","games","sketches"]
 }
 
@@ -34,22 +34,22 @@ console.log(person["person hobbie"]);
 const key = "email";
 
 const person = {
-    name : "Yatin",
-    age : 23,
+    name : "hiral",
+    age : 17,
     "person hobbie" : ["chess","games","sketches"]
 }
 
 // Dot Notation (adding data with key variable)
 
-// person.key = "abcd2323@gmail.com";
+// person.key = "hiral.02@gmail.com";
 //here while adding data with dot notation
 // the key variable it self is considered key here and 
 // not the data inside the key 
 
 // Bracket Notation (adding data with key variable)
 
-// person["key"] = "abcd2323@gmail.com";
-person[key] = "abcd2323@gmail.com";
+// person["key"] = "hiral.02@gmail.com";
+person[key] = "hiral.02@gmail.com";
 console.log(person);
 
 // here when we give key variable it fetches its value and 

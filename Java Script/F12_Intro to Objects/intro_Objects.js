@@ -17,8 +17,8 @@
 
 // Object created for person
 const person = {
-    name : "Yatin",
-    age : 23,
+    name : "hiral",
+    age : 17,
     hobbie : ["chess","games","sketches"]
 }
 

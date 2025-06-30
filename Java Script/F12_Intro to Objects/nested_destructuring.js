@@ -4,15 +4,15 @@
 const users = [
     {
     userid : 1,
-    user_name: "Yatin",
-    gender : "male"},
+    user_name: "hiral",
+    gender : "female"},
     {
     userid : 2,
-    user_name: "siddesh",
+    user_name: "dinesh",
     gender : "male"},
     {
     userid : 3,
-    user_name: "shivani",
+    user_name: "riya",
     gender : "female"},
 
 ]
