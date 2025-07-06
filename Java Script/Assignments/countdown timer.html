@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer & Greeting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+        .container {
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        #timer-container {
+            background-color: #f8f9fa;
+        }
+        #greeting-container {
+            background-color: #e9f7ef;
+        }
+        #timer {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+            margin: 15px 0;
+        }
+        #greeting {
+            font-size: 24px;
+            color: #2c3e50;
+            opacity: 0;
+            height: 30px;
+            transition: opacity 0.5s ease-in-out;
+        }
+        h2 {
+            color: #495057;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="timer-container">
+        <h2>Countdown Timer</h2>
+        <div id="timer">10</div>
+    </div>
+
+    <div class="container" id="greeting-container">
+        <h2>Delayed Greeting</h2>
+        <div id="greeting"></div>
+    </div>
+
+    <script>
+        // Task 1: Countdown Timer (10 to 0)
+        let count = 10;
+        const timerElement = document.getElementById('timer');
+        
+        const countdown = setInterval(() => {
+            count--;
+            timerElement.textContent = count;
+            
+            if (count <= 0) {
+                clearInterval(countdown);
+                timerElement.textContent = "🎉 Time's up!";
+                timerElement.style.color = "#e63946";
+                document.getElementById('timer-container').style.backgroundColor = "#ffe5ec";
+            }
+        }, 1000);
+
+        // Task 2: Delayed Greeting Message (after 3 seconds)
+        setTimeout(() => {
+            const greetingElement = document.getElementById('greeting');
+            greetingElement.textContent = "👋 Hello! Welcome!";
+            greetingElement.style.opacity = 1;
+            document.getElementById('greeting-container').style.backgroundColor = "#d4edda";
+        }, 3000);
+    </script>
+</body>
+</html>
