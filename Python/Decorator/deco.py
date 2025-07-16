@@ -1,35 +1,34 @@
 # Defination : Decorator is a function that takes another function as argument and retuns a function.
 
-def greet():
+def greet(a):
     def demo():
         print("Good Morning")
-        
-        print("Thhanks for using this function.")
-    # return demo
-    demo()
+        print("Thanks for using this function.")
+        a()
+    return demo
+    # demo()
 
-# @greet
+@greet
 def fun():
     print("Hello world")
 
 fun()
-greet()
-# greet(fun)()
+# greet()
 
-print("-"*70)
+# print("-"*70)
 
 
-def decorator(fun):
-    def wrapper():
-        print("Transaction inited...")
-        fun()
-        print("Transaction Completed...")
-    return wrapper
+# def decorator(fun):
+#     def wrapper():
+#         print("Transaction inited...")
+#         fun()
+#         print("Transaction Completed...")
+#     return wrapper
 
-@decorator
-def hello():
-    print("....Executing all steps of Transaction....")
+# @decorator
+# def hello():
+#     print("....Executing all steps of Transaction....")
 
-hello()
+# hello()
 
-# decorator(hello)()
+# # decorator(hello)()

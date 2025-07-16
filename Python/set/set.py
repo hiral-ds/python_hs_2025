@@ -1,6 +1,6 @@
 # Sets are used to store multiple items in a single variable.
 
-# A set is a collection which is mutable, unordered, unchangeable*, and unindexed.
+# A set is a collection which is mutable, unordered, and unindexed.
 # Set items can appear in a different order every time you use them, and cannot be referred to by index or key.
 
 # Sets are written with curly brackets.

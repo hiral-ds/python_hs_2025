@@ -11,7 +11,7 @@ number = [2,5,8,6,4]
 sum = functools.reduce(lambda x,y :x+y,number)
 print("Sum list of numbers",sum)
 
-word = ["I","Love","Coding"]
+word = ["I","Love","You"]
 add = functools.reduce(lambda x,y: x + ' ' + y , word)
 print(add)
 

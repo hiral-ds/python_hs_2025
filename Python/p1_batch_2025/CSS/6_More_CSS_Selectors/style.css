@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&family=Roboto:wght@400;500;700;900&display=swap');
+
+/*
+
+Universal Selector '*' 
+*{
+    color:plum;
+}
+*/
+ header{
+    background-color: #f2e9e9 ;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+
+ section.my-articles{
+   background-color: #f2e9e9;
+ }
+
+ header p{
+    color:blueviolet;
+ }
+
+ li a {
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    color:blue;
+ }
+
+ /* 
+ 
+ // It Changes All h2 inside the section
+  
+ section.my-articles h2: This is a CSS selector that targets all h2 elements 
+ are descendants of a section element with the class my-articles. 
+ It selects h2 elements inside the specified section.
+ */
+
+ 
+ section.my-articles h2{ 
+    font-family: sans-serif;
+    color: green;
+ }
+
+ 
+
+/*
+//Change the direct Child 
+
+section.my-articles > h2: This selector uses the child combinator (>) to target all 
+h2 elements that are direct children of a section element with the class my-articles.
+ It selects only immediate children of the section.
+*/
+
+ section.my-articles > h2{    
+    font-family: sans-serif;
+    color: green;
+ }
+
+ /*
+  Changes paragraph directly after h2 anywhere 
+  This rule targets any p element that directly follows an h2 element anywhere 
+  in the HTML document and changes its text color to orangered.
+  */
+
+  /* Adjacent Sibling*/
+ h2+p{
+    color : orangered;
+ }
+
+ /* 
+    Changes paragraph directly after ul anywhere
+ This rule targets any p element that directly follows a ul (unordered list)
+ element anywhere in the HTML document and changes its text color to darkmagenta.
+ 
+ */
+ ul+p{
+    color :darkmagenta;
+ }
+
+/* Changes paragraph directly after h2 where section is myarticles
+This rule specifically targets any p element that directly follows an h2 element, 
+but only when the h2 is within a section element with the class "my-articles." 
+It changes the text color of such p elements to orangered.
+*/
+section.my-articles h2+p{
+    color : orangered;
+ }
+
+ /*
+   These CSS rules use the adjacent sibling combinator (+) to select elements that are
+   immediately preceded by another specific element. This allows you to apply different
+   styles to paragraphs based on their proximity to h2 or ul elements, either globally 
+   or within a specific context.
+ */

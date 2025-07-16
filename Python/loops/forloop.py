@@ -4,9 +4,9 @@ n = 4
 for i in range(0, n):
     print(i)
 
-# fruits = ["apple", "banana", "cherry"]
-# for x in fruits:
-#   print(x)
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  print(x)
 
 # With the break statement we can stop the loop before it has looped through all the items:
 

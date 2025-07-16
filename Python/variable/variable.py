@@ -9,7 +9,7 @@ print(x)
 print(y)
 
 
-# Variable do not need to be ddeclared with any particular type, and can even change type after they have been set.
+# Variable do not need to be declared with any particular type, and can even change type after they have been set.
 
 a = 4
 a = "Salt"
